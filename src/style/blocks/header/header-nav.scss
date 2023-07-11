@@ -1,0 +1,11 @@
+.header__nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;       
+}
+.header__burger{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}

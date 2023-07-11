@@ -1,0 +1,15 @@
+.header {
+    background-color: $active-color;    
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding-top: 15px; 
+        padding-bottom: 12px;
+    }
+    &__logo{
+        width:  179px;
+        height: 60px;
+        background: url(../img/icons/logo.svg) no-repeat;
+        background-size: contain;
+    }
+}

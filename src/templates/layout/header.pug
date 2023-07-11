@@ -1,0 +1,16 @@
+- const mainMenu = ['Афиша', 'Новости', 'Спектакли', 'О театре', 'Контакты'];
+mixin header()
+    header.header
+        .header__container.container
+            a(href="#").header__logo
+            nav.header__nav
+                ul.main-menu
+                    if mainMenu.length
+                        each menuItem in mainMenu
+                            li.main-menu__item
+                                a(href="#").main-menu__link=menuItem
+                        li.main-menu__item.--contact
+                            a(href="#").main-menu__link Купить билеты
+                            a(href="#").main-menu__link.--contact +7 (342) 712-49-49
+                .header__burger
+                    include ../components/burger.pug
