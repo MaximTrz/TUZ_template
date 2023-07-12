@@ -1,3 +1,197 @@
-footer{
+.footer{
+  padding-top: 22px;
+  padding-bottom: 22px;
   margin-top: auto;
+  background-color: rgba(40, 40, 40, 1);
+  font-family: $second-font;
+  color: $main-light;
+  font-size: 14px;
+  font-weight: 600;
+  
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 0.6fr 0.75fr 1fr 0.2fr 0.1fr;
+    justify-content: space-between;
+    position: relative;
+    @include tablet{
+      display: flex;
+      justify-content: space-between;      
+    }
+    @include phone{
+      flex-direction: column;      
+    }        
+  }
+
+  &__logo-box{
+    display: flex;
+    align-items: center;
+    @include phone{
+      order: 4;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__logo{
+    width:  179px;
+    height: 59px;
+    background: url(../img/icons/footer/footer-logo.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &__nav{
+    @include tablet{
+      display: none;
+    }
+    @include phone{
+      display: block;
+    } 
+  }
+
+  &__menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include phone{
+      display: block;      
+      margin-bottom: 30px;
+    }
+    @include phone{
+      &>:last-child>.footer__menu-link{
+        border-bottom: 1px solid rgba(80, 80, 80, 1);    
+      }
+    }
+
+  }
+
+  &__menu-item{
+    text-align: center;
+    display: block;
+    @include phone{
+        padding: 0 20px;
+    }     
+  }
+
+  &__menu-link{
+    display: block;
+    color: $main-light;
+    padding: 10px 0px;
+    @include phone{
+      border-top: 1px solid rgba(80, 80, 80, 1);      
+    }         
+  }
+
+  &__contacts{
+    @include tablet{
+      display: none;
+    }
+  }
+
+  &__contacts-title{
+    margin-bottom: 11px;
+  }
+
+  &__contact-link{
+    display: block;
+    font-family: $second-font;
+    color: $main-light;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 5px 0;
+    padding-left: 15px;
+    position: relative;    
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 10px;
+      height: 10px;      
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-size: contain;  
+    }
+    &.--phone{
+      &::before{
+        background: url(../img/icons/footer/phone.svg) no-repeat;    
+      }          
+    }
+    &.--adress{
+      &::before{
+        background: url(../img/icons/footer/marker.svg) no-repeat;    
+      }          
+    } 
+    &.--email{
+      &::before{
+        background: url(../img/icons/footer/email.svg) no-repeat;    
+      }          
+    } 
+
+  }
+
+  &__social-icons{      
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    @include small-desktop{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @include tablet{
+      flex-direction: row;
+      align-items: center;
+      order: 3;
+    }
+    @include phone{
+      order: 2;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__social-link{
+    display: block;
+    width: 27px;
+    height: 27px;
+    &.--vk{
+      background: url(../img/icons/footer/vk.svg) no-repeat;
+      background-size: contain;
+    }
+    &.--telegram{
+      background: url(../img/icons/footer/telegram.svg) no-repeat;
+      background-size: contain;      
+    }
+  }
+
+  &_button-box{
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include small-desktop{
+      right: 0;
+    }
+    @include tablet{      
+      left: 50%;
+      transform: translateX(-50%);
+      transform: translate(-50%, -50%);    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include phone{
+      display: none;
+    }      
+  }
+
+  &__back-to-top{
+    display: block;
+    cursor: pointer;
+    background: url(../img/icons/footer/ontop.svg) no-repeat;
+    background-size: contain;
+    width: 32px;
+    height: 32px;  
+  }
 }

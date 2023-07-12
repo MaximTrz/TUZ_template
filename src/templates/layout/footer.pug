@@ -1,2 +1,32 @@
+- const footerNav = ['Новости', 'Спектакли',  'О театре', 'Люди театра', 'Афиша', 'Купить билет'];
 mixin footer()
-    footer Футер
+    footer.footer
+        .container
+            .footer__wrapper
+                .footer__logo-box
+                    .footer__logo
+                .footer__contacts
+                    .footer__contacts-title Контакты
+                    ul.footer__contacts-list
+                        li.footer__contact 
+                            a(href="#").footer__contact-link.--phone +7 (342) 712-49-49
+                        li.footer__contact 
+                           a(href="#").footer__contact-link.--adress 617470, г.Кунгур, улица Гоголя, 27
+                        li.footer__contact 
+                           a(href="#").footer__contact-link.--email teatrmolodegi@yandex.ru
+                                        
+                nav.footer__nav
+                    ul.footer__menu
+                        if footerNav.length
+                            each menuItem in footerNav
+                                li.footer__menu-item
+                                    a(href="#").footer__menu-link=menuItem 
+                            
+                ul.footer__social-icons
+                    li.footer__social-icon
+                        a(href="#").footer__social-link.--vk
+                    li.footer__social-icon
+                        a(href="#").footer__social-link.--telegram 
+                
+                .footer_button-box
+                    span.footer__back-to-top

@@ -1,4 +1,4 @@
-$base-font-size: 16px;
+$base-font-size: 18px;
 
 //Разрешения экранов
 $phone-width: 320px;
@@ -8,6 +8,13 @@ $desktop-width: 1200px;
 $wide-desktop-width : 1400px;
 
 //Цвета
+$main-text: rgba(0, 0, 0, 1);
+$main-light: rgba(255, 255, 255, 1);
 $active-color: rgba(206, 69, 27, 1);
 $push-color: rgba(175, 47, 18, 1);
 $not-selected-color: rgba(131, 127, 126, 1);
+
+
+//Шрифты
+$main-font: 'Roboto Slab', serif;
+$second-font: 'Montserrat', sans-serif;
