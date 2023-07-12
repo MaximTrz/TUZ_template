@@ -63,11 +63,11 @@
 
   }
 
-  &__menu-item{
-    text-align: center;
+  &__menu-item{    
     display: block;
     @include phone{
         padding: 0 20px;
+        text-align: center;
     }     
   }
 

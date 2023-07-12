@@ -5,6 +5,15 @@
         grid-template-columns: 1fr 4fr;
         padding-top: 15px; 
         padding-bottom: 12px;
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+        .--open{
+            @include tablet{
+                justify-content: end; 
+            }                       
+        }
     }
     &__logo{
         width:  179px;
