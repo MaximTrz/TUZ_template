@@ -1,0 +1,111 @@
+.main-slider{
+    position: relative;
+    &__slide{
+        position: relative;         
+    }
+    &__content{        
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+        width: 70%;
+        height: 100%;
+        color: $main-light;        
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 3.2%, rgba(0, 0, 0, 0.4) 75.8%, rgba(0, 0, 0, 0) 101.37%);
+        @include tablet{
+            width: 90%;
+        }
+        @include phone{
+            width: 100%;
+        }
+    }
+    &__title{
+        font-family: $main-font;        
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 61px;
+        letter-spacing: 0em;
+        padding-top: 20px;
+        padding-left: 30px; 
+        @include small-desktop{
+            font-size: 50px;
+        }
+        @include tablet{        
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 33px;
+            letter-spacing: 0em;    
+        }
+        @include phone{            
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 22px;
+            letter-spacing: 0em;
+        }     
+    }
+    &__text{
+        padding-left: 30px;
+        padding-bottom: 20px;   
+        font-family: $second-font;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        width: 40%;
+        @include tablet{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0em;
+        }
+        @include phone{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            letter-spacing: 0em;
+        }                     
+    }
+    &__img{
+        height: 425px;
+        @include tablet{
+            height: 260px;
+        }
+        @include phone{
+            height: 200px;
+        }       
+    }
+    
+    &__pagination{
+        margin-top: 14px;
+        position: static;
+    }
+
+    &__next:after{        
+        transform: translateX(65px) translateY(-20px);
+        color: rgba(80, 80, 80, 1);
+        @include small-desktop{
+            transform: translateX(40px) translateY(-20px);
+        }
+        @include tablet{
+            transform: translateX(45px) translateY(-20px);
+        }
+        @include phone{
+            display: none;
+        }        
+    }
+    &__prev{
+        transform: translateX(-65px) translateY(-20px);; 
+        color: rgba(80, 80, 80, 1);
+        @include small-desktop{
+            transform: translateX(-40px) translateY(-20px); 
+        }
+        @include tablet{
+            transform: translateX(-45px) translateY(-20px); 
+        }
+        @include phone{
+            display: none;
+        }   
+    } 
+}

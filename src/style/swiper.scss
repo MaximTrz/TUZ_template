@@ -1,0 +1,14 @@
+.swiper-button-next:after, .swiper-button-prev:after {   
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet{
+    border: 1px solid rgba(80, 80, 80, 1);
+    background-color: #fff;
+}
+
+.swiper-pagination-bullet-active{
+    border: 1px solid rgba(80, 80, 80, 1);
+    background-color: rgba(80, 80, 80, 1);
+}

@@ -1,0 +1,18 @@
+- const slides = [{title:"Там на неведомых дорожках и на Кудыкиной горе", text: "Премьера сезона! Приходите в театр всей семьёй, всем классом или любой дружной компанией!", image:"DSC_7786.jpg"}, {title:"Там на неведомых дорожках и на Кудыкиной горе", text: "Премьера сезона! Приходите в театр всей семьёй, всем классом или любой дружной компанией!", image:"DSC_7786.jpg"}, {title:"Там на неведомых дорожках и на Кудыкиной горе", text: "Премьера сезона! Приходите в театр всей семьёй, всем классом или любой дружной компанией!", image:"DSC_7786.jpg"}];
+
+section.top-slider
+    .container
+        .main-slider
+            .main-slider__container.swiper.js-main-swiper
+                .main-slider__slides-wrapper.swiper-wrapper
+                    if slides.length
+                        each slide in slides
+                            .main-slider__slide.swiper-slide
+                                .main-slider__content                            
+                                    .main-slider__title=slide.title
+                                    p.main-slider__text=slide.text
+                                .main-slider__img-wrapper
+                                    div(style=`background: url(../images/${slide.image}) center no-repeat; background-size: cover;`).main-slider__img
+            .main-slider__pagination.swiper-pagination            
+            .main-slider__next.swiper-button-next
+            .main-slider__prev.swiper-button-prev

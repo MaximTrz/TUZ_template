@@ -9,13 +9,10 @@
             display: flex;
             justify-content: space-between;
         }
-        .--open{
-            @include tablet{
-                justify-content: end; 
-            }                       
-        }
+   
     }
     &__logo{
+        margin-left: 20px;
         width:  179px;
         height: 60px;
         background: url(../img/icons/logo.svg) no-repeat;
