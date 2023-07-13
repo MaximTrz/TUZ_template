@@ -84,7 +84,7 @@
 
     &__next:after{        
         transform: translateX(65px) translateY(-20px);
-        color: rgba(80, 80, 80, 1);
+        color: $sliderElementsColor;
         @include small-desktop{
             transform: translateX(40px) translateY(-20px);
         }
@@ -97,7 +97,7 @@
     }
     &__prev{
         transform: translateX(-65px) translateY(-20px);; 
-        color: rgba(80, 80, 80, 1);
+        color: $sliderElementsColor;
         @include small-desktop{
             transform: translateX(-40px) translateY(-20px); 
         }

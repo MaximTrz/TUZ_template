@@ -4,11 +4,11 @@
 }
 
 .swiper-pagination-bullet{
-    border: 1px solid rgba(80, 80, 80, 1);
+    border: 1px solid $sliderElementsColor;
     background-color: #fff;
 }
 
 .swiper-pagination-bullet-active{
-    border: 1px solid rgba(80, 80, 80, 1);
-    background-color: rgba(80, 80, 80, 1);
+    border: 1px solid $sliderElementsColor;
+    background-color: $sliderElementsColor;
 }
