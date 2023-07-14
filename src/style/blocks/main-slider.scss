@@ -1,5 +1,6 @@
 .main-slider{
     position: relative;
+    margin-bottom: 55px;
     &__slide{
         position: relative;         
     }
@@ -81,31 +82,4 @@
         margin-top: 14px;
         position: static;
     }
-
-    &__next:after{        
-        transform: translateX(65px) translateY(-20px);
-        color: $sliderElementsColor;
-        @include small-desktop{
-            transform: translateX(40px) translateY(-20px);
-        }
-        @include tablet{
-            transform: translateX(45px) translateY(-20px);
-        }
-        @include phone{
-            display: none;
-        }        
-    }
-    &__prev{
-        transform: translateX(-65px) translateY(-20px);; 
-        color: $sliderElementsColor;
-        @include small-desktop{
-            transform: translateX(-40px) translateY(-20px); 
-        }
-        @include tablet{
-            transform: translateX(-45px) translateY(-20px); 
-        }
-        @include phone{
-            display: none;
-        }   
-    } 
 }

@@ -1,7 +1,10 @@
+include ../components/a_button
 mixin article(art)
     .article
         div(style=`background: url(../images/${art.image}) center no-repeat; background-size: cover;`).article__img
-        .article__title=art.title
-        p.article__text=art.text
-        .aricle__date 07.06.2023
-
+        .article__text-content
+            .article__title=art.title
+            p.article__text=art.text
+            .article__button
+                +a_button(`Читать далее`)
+            .article__date 07.06.2023
