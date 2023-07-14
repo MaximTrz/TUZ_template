@@ -21,12 +21,14 @@
         line-height: 21px;
         z-index: $z-top;
         &::before{
-            position: absolute;
-            left: -20px;
+            position: absolute;            
+            left: -28px;
+            top: 7px;            
             content: '';
             width: 20px;
             height: 20px;
-            //background-color: red;
+            background: url(../img/icons/arrow.svg) no-repeat;
+            background-size: contain;     
         }
     }    
 }
