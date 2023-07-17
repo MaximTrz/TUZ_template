@@ -1,0 +1,63 @@
+.billboard-item{
+    display: grid;
+    grid-template-columns: 1.1fr 0.5fr 0.6fr 2.8fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    &:hover{
+        background-color: rgba(240, 240, 240, 1);        
+    }
+    
+    &__img{
+        width: 168px;
+        height: 91px;
+    }
+    &__day{        
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 70px;
+    }
+    &__time{
+        font-family: $second-font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    &__month{
+        font-family: $second-font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    &__about-text{
+        font-family: $second-font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        margin-bottom: 7px;
+    }
+    &__title{
+        font-family: $second-font;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 26px;
+        overflow: hidden;
+    }
+    &__director{
+        font-family: $second-font;
+        margin-top: 7px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__age{
+        font-size: 28px;
+        font-weight: 200;
+        line-height: 34px;
+        letter-spacing: 0em;
+    }
+}
