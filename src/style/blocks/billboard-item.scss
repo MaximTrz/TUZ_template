@@ -1,6 +1,7 @@
 .billboard-item{
     display: grid;
-    grid-template-columns: 1.1fr 0.5fr 0.6fr 2.8fr 1fr;
+    grid-template-columns: 1.1fr 0.5fr 0.7fr 3.2fr 0.95fr;
+    grid-gap: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     align-items: center;
@@ -53,6 +54,7 @@
     &__button{
         display: flex;
         justify-content: flex-end;
+        height: 25px;
     }
     &__age{
         font-size: 28px;
