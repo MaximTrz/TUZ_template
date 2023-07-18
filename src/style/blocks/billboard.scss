@@ -1,6 +1,18 @@
 .billboard{
+    position: relative;
     margin-bottom: 70px;
+    &__items{
+        margin-bottom: 25px;
+    }
     &__item{
         border-bottom: 0.4px dashed  rgba(0, 0, 0, 0.5);
+    }
+    &__all-billboard{
+        text-align: right;
+        @include phone{
+            position: absolute;
+            top: -2px;
+            right: 10px;
+        }
     }    
 }

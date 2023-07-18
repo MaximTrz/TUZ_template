@@ -1,4 +1,9 @@
 .news{
+    position: relative;
+    margin-bottom: 40px;
+    @include phone{
+        margin-bottom: 60px;
+    }
     &__title{
         font-family: $second-font;
         font-size: 24px;
@@ -6,6 +11,11 @@
         line-height: 32px;
         color: $main-text;
         margin-bottom: 10px;
+        @include phone{          
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21px;
+        }              
     }
     &__container{
         position: relative;
@@ -14,21 +24,10 @@
         position: absolute;
         bottom: 12px;
         right: 0;
-        font-family: $main-font;
-        color: $main-text;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 21px;
-        z-index: $z-top;
-        &::before{
-            position: absolute;            
-            left: -28px;
-            top: 7px;            
-            content: '';
-            width: 20px;
-            height: 20px;
-            background: url(../img/icons/arrow.svg) no-repeat;
-            background-size: contain;     
-        }
+        z-index: 500;
+        @include phone{
+            top: -2px;
+            right: 10px;
+        }     
     }    
 }

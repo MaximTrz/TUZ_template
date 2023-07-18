@@ -1,17 +1,47 @@
 .billboard-item{
     display: grid;
-    grid-template-columns: 1.1fr 0.5fr 0.7fr 3.2fr 0.95fr;
-    grid-gap: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    grid-template-columns: 1fr 0.9fr 3fr 0.9fr;
+    grid-gap: 30px;
+    @include phone{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     align-items: center;
     &:hover{
         background-color: rgba(240, 240, 240, 1);        
     }
-    
+    @include small-desktop{
+        grid-template-columns: 1fr 0.5fr 3.5fr 0.9fr;
+    }
+    @include tablet{
+        grid-template-columns: 0.7fr 3fr 1.2fr;
+    }
+    @include phone{
+        position: relative;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }    
     &__img{
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 168px;
         height: 91px;
+        @include tablet{
+            display: none;
+        }
+    }
+    &__date{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include small-desktop{
+            flex-direction: column;
+        }
+        @include phone{
+            flex-direction: row;
+            justify-content: start;
+        }
     }
     &__day{        
         font-size: 54px;
@@ -30,19 +60,36 @@
         font-weight: 500;
         line-height: 19px;
     }
+    &__about{
+        padding-left: 20px;
+        @include phone{
+            padding: 0;
+        }
+    }
     &__about-text{
         font-family: $second-font;
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
         margin-bottom: 7px;
+        @include phone{
+            display: none;
+        }        
     }
     &__title{
         font-family: $second-font;
         font-size: 28px;
         font-weight: 500;
         line-height: 26px;
-        overflow: hidden;
+        @include small-desktop{
+            font-size: 26px;
+        }
+        @include tablet{           
+            font-size: 20px;
+        }
+        @include phone{
+            margin-bottom: 20px;
+        }
     }
     &__director{
         font-family: $second-font;
@@ -50,16 +97,26 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
+        @include phone{
+            display: none;
+        } 
     }
     &__button{
         display: flex;
         justify-content: flex-end;
         height: 25px;
+        @include phone{
+            height: auto;
+            width: 120px;
+        }
     }
     &__age{
         font-size: 28px;
         font-weight: 200;
         line-height: 34px;
-        letter-spacing: 0em;
+        @include phone{
+            position: absolute;
+            top: 25px;
+        }
     }
 }

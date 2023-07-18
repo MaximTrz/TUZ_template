@@ -1,0 +1,30 @@
+.all-items-link{
+    position: relative;
+    font-family: $main-font;
+    color: $main-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    &:hover{
+        color: $active-color;
+        &::before{  
+            background: url(../img/icons/arrow-red.svg) no-repeat;    
+        }
+    }
+    @include phone{
+        text-decoration: underline;
+    }
+    &::before{
+        position: absolute;            
+        left: -28px;
+        top: 7px;            
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url(../img/icons/arrow.svg) no-repeat;
+        background-size: contain;
+        @include phone{
+            display: none;
+        }     
+    }
+}
