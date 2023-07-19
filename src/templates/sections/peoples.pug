@@ -1,0 +1,22 @@
+- const peoples = [{name: "Петрова Светлана Раисовна", image: "945d4fhwcUA.jpg", position: "Директор" }, {name: "Оборина Наталья Николаевна", image: "63q0LEpfB_8.jpg", position: "Делопроизводитель" }, {name: "Ширинкина-Бартова Екатерина", image: "dbCp4UK75UA.jpg", position: "Актрисаы" }, {name: "Камаева Татьяна Александровна", image: "NjDiJHem494.jpg", position: "Актриса" }, {name: "Кашеварова Анна Александровна", image: "Eyxu7-4jiMM.jpg", position: "Актриса" }];
+
+include ../components/people
+include ../components/all-items-link
+
+section.peoples
+    .container.--not-mobile
+        .peoples__title
+            +section_title({text: "Люди театра", link_text: "Все о театре"})
+    .container
+        .peoples__container            
+            .peoples__slider.swiper.js-peoples-swiper
+                ul.peoples__wrapper.swiper-wrapper
+                    if peoples.length
+                        each people_item in peoples
+                            li.peoples__item.swiper-slide
+                                +people(people_item)
+            .peoples__pagination.swiper-pagination
+            .peoples__al-peoples-link 
+                +all-items-link('Всё о театре')
+            .peoples__next.swiper-button-next
+            .peoples__prev.swiper-button-prev                        

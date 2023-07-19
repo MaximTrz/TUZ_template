@@ -1,0 +1,33 @@
+.peoples{
+    margin-bottom: 50px;
+    &__title{
+        margin-bottom: 10px;
+    }
+    &__container{
+        position: relative;       
+    }
+    &__slider{        
+        padding-bottom: 70px;
+        @include phone{
+            margin-bottom: 0;
+        }
+    }
+    &__pagination{
+        bottom: 0px;
+    }
+    &__al-peoples-link{
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        z-index: 500;
+        @include phone{
+            display: none;
+        } 
+    }
+    &__next{
+        transform: translateY(-50px);
+    }
+    &__prev{
+        transform: translateY(-50px);
+    } 
+}

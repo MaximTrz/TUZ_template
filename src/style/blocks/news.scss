@@ -5,17 +5,7 @@
         margin-bottom: 60px;
     }
     &__title{
-        font-family: $second-font;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 32px;
-        color: $main-text;
-        margin-bottom: 10px;
-        @include phone{          
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 21px;
-        }              
+        margin-bottom: 10px;          
     }
     &__container{
         position: relative;
@@ -26,9 +16,7 @@
         right: 0;
         z-index: 500;
         @include phone{
-            height: 20px;
-            top: -2px;
-            right: 10px;
+            display: none;
         }     
     }    
 }

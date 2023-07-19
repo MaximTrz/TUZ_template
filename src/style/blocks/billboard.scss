@@ -10,9 +10,7 @@
     &__all-billboard{
         text-align: right;
         @include phone{
-            position: absolute;
-            top: -2px;
-            right: 10px;
+            display: none;
         }
     }    
 }

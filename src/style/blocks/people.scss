@@ -1,0 +1,21 @@
+.people{
+    &__img{
+        height: 338px;
+        margin-bottom: 10px;
+        @include phone{
+            height: 288px;
+        }
+    }
+    &__name{        
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        margin-bottom: 8px;
+    }
+    &__position{
+        font-family: $second-font;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+    }
+}

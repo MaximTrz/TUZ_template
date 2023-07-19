@@ -1,0 +1,6 @@
+include all-items-link
+mixin section_title(title)
+        .section-title            
+            h2.section-title__title=title.text
+            .section-title__al-link
+                +all-items-link(title.link_text)

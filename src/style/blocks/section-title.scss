@@ -1,0 +1,19 @@
+.section-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    @include phone{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__al-link{
+        display: none;
+        @include phone{
+            display: block;
+        }
+    }
+
+}

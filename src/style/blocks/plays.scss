@@ -7,7 +7,7 @@
         }        
     }
     &__slider{
-        margin-bottom: 20px;
+        margin-bottom: 8px;
         @include phone{
             margin-bottom: 0;
         }
@@ -26,9 +26,13 @@
         right: 0;
         z-index: 500;
         @include phone{
-            height: 20px;
-            top: -2px;
-            right: 10px;
+            display: none;
         } 
     }
+    &__next{
+        transform: translateY(-20px);
+    }
+    &__prev{
+        transform: translateY(-20px);
+    } 
 }

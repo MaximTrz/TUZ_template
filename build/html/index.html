@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container --not-mobile">
         <div class="header__container"><a class="header__logo" href="#"></a>
           <nav class="header__nav">
             <ul class="main-menu">
@@ -32,7 +32,7 @@
     </header>
     <main>
       <section class="top-slider">
-        <div class="container">
+        <div class="container --not-mobile">
           <div class="main-slider">
             <div class="main-slider__container swiper js-main-swiper">
               <div class="main-slider__slides-wrapper swiper-wrapper">
@@ -71,10 +71,18 @@
           </div>
         </div>
       </section>
-      <section class="news">
+      <section class="news"> 
+        <div class="container --not-mobile">
+          <div class="news__title">
+                  <div class="section-title">           
+                    <h2 class="section-title__title">Новости | сентябрь</h2>
+                    <div class="section-title__al-link"><a class="all-items-link" href="#"><span class="all-items-link__text">Все новости</span></a>
+                    </div>
+                  </div>
+          </div>
+        </div>
         <div class="container">
-          <div class="news__container"> 
-            <h2 class="news__title">Новости | сентябрь</h2>
+          <div class="news__container">
             <div class="news__slider swiper js-news-swiper">
               <div class="news__wrapper swiper-wrapper">
                 <div class="news__item swiper-slide">
@@ -148,9 +156,16 @@
         </div>
       </section>
       <section class="billboard">
-        <div class="container">
-          <div class="billboard__container">
-            <h2 class="billboard__title">Афиша</h2>
+        <div class="container --not-mobile">
+          <div class="billboard__title">
+                  <div class="section-title">           
+                    <h2 class="section-title__title">Афиша</h2>
+                    <div class="section-title__al-link"><a class="all-items-link" href="#"><span class="all-items-link__text">Вся афиша</span></a>
+                    </div>
+                  </div>
+          </div>
+          <div class="container">
+            <div class="billboard__container"></div>
             <ul class="billboard__items">
               <li class="billboard__item">
                       <div class="billboard-item">
@@ -216,9 +231,17 @@
         </div>
       </section>
       <section class="plays">
+        <div class="container --not-mobile">
+          <div class="news__title">
+                  <div class="section-title">           
+                    <h2 class="section-title__title">Спектакли</h2>
+                    <div class="section-title__al-link"><a class="all-items-link" href="#"><span class="all-items-link__text">Все спектакли</span></a>
+                    </div>
+                  </div>
+          </div>
+        </div>
         <div class="container">
-          <div class="plays__container">
-            <h2 class="plays__title">Спектакли</h2>
+          <div class="plays__container">           
             <div class="plays__slider swiper js-plays-swiper">
               <ul class="plays__wrapper swiper-wrapper">
                 <li class="plays__item swiper-slide">
@@ -258,6 +281,65 @@
             </div>
             <div class="plays__next swiper-button-next"></div>
             <div class="plays__prev swiper-button-prev">                       </div>
+          </div>
+        </div>
+      </section>
+      <section class="peoples">
+        <div class="container --not-mobile">
+          <div class="peoples__title">
+                  <div class="section-title">           
+                    <h2 class="section-title__title">Люди театра</h2>
+                    <div class="section-title__al-link"><a class="all-items-link" href="#"><span class="all-items-link__text">Все о театре</span></a>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="peoples__container">           
+            <div class="peoples__slider swiper js-peoples-swiper">
+              <ul class="peoples__wrapper swiper-wrapper">
+                <li class="peoples__item swiper-slide">
+                        <div class="people">
+                          <div class="people__img" style="background: url(../images/945d4fhwcUA.jpg) center no-repeat; background-size: cover;"></div>
+                          <div class="people__name">Петрова Светлана Раисовна</div>
+                          <div class="people__position">Директор</div>
+                        </div>
+                </li>
+                <li class="peoples__item swiper-slide">
+                        <div class="people">
+                          <div class="people__img" style="background: url(../images/63q0LEpfB_8.jpg) center no-repeat; background-size: cover;"></div>
+                          <div class="people__name">Оборина Наталья Николаевна</div>
+                          <div class="people__position">Делопроизводитель</div>
+                        </div>
+                </li>
+                <li class="peoples__item swiper-slide">
+                        <div class="people">
+                          <div class="people__img" style="background: url(../images/dbCp4UK75UA.jpg) center no-repeat; background-size: cover;"></div>
+                          <div class="people__name">Ширинкина-Бартова Екатерина</div>
+                          <div class="people__position">Актрисаы</div>
+                        </div>
+                </li>
+                <li class="peoples__item swiper-slide">
+                        <div class="people">
+                          <div class="people__img" style="background: url(../images/NjDiJHem494.jpg) center no-repeat; background-size: cover;"></div>
+                          <div class="people__name">Камаева Татьяна Александровна</div>
+                          <div class="people__position">Актриса</div>
+                        </div>
+                </li>
+                <li class="peoples__item swiper-slide">
+                        <div class="people">
+                          <div class="people__img" style="background: url(../images/Eyxu7-4jiMM.jpg) center no-repeat; background-size: cover;"></div>
+                          <div class="people__name">Кашеварова Анна Александровна</div>
+                          <div class="people__position">Актриса</div>
+                        </div>
+                </li>
+              </ul>
+            </div>
+            <div class="peoples__pagination swiper-pagination"></div>
+            <div class="peoples__al-peoples-link"> <a class="all-items-link" href="#"><span class="all-items-link__text">Всё о театре</span></a>
+            </div>
+            <div class="peoples__next swiper-button-next"></div>
+            <div class="peoples__prev swiper-button-prev">                       </div>
           </div>
         </div>
       </section>

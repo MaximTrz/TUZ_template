@@ -84,3 +84,41 @@ const playsSwiper = new Swiper(".js-plays-swiper", {
     },
   },
 });
+
+const peoplesSwiper = new Swiper(".js-peoples-swiper", {
+  slidesPerView: 4,
+  dynamicBullets: true,
+  spaceBetween: 25,
+  pagination: {
+    el: ".peoples__pagination",
+  },
+  navigation: {
+    nextEl: ".peoples__next",
+    prevEl: ".peoples__prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});

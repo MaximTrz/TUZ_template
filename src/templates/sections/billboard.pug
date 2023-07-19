@@ -1,10 +1,14 @@
 include ../components/billboard-item
 include ../components/all-items-link
+include ../components/section-title
 - const billboard = [{image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Как Марфушку замуж выдавали", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}];
 section.billboard
-    .container
-        .billboard__container
-            h2.billboard__title Афиша
+    .container.--not-mobile
+        .billboard__title
+            +section_title({text: "Афиша", link_text: "Вся афиша"})        
+  
+        .container
+            .billboard__container
             ul.billboard__items
                 if billboard.length
                     each item in billboard
