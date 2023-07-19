@@ -1,0 +1,20 @@
+- const plays = [{title: "Карлсон", image: "kurlson.jpg"}, {title: "Там на неведомых дорожках и на Кудыкиной горе", image: "kudyka.jpg"}, {title: "Лисичкина сказка", image: "lisa.jpg"}, {title: "Золушка", image: "zolishka.jpg"}, {title: "Красная шапочка", image: "shapka.jpg"}];
+
+include ../components/play
+include ../components/all-items-link
+
+section.plays
+    .container
+        .plays__container
+            h2.plays__title Спектакли
+            .plays__slider.swiper.js-plays-swiper
+                ul.plays__wrapper.swiper-wrapper
+                    if plays.length
+                        each play_item in plays
+                          li.plays__item.swiper-slide
+                                +play(play_item)
+            .plays__pagination.swiper-pagination
+            .plays__al-plays-link 
+                +all-items-link('Все спектакли')
+            .plays__next.swiper-button-next
+            .plays__prev.swiper-button-prev                        

@@ -10,6 +10,9 @@ const swiper = new Swiper(".js-main-swiper", {
     nextEl: ".main-slider__next",
     prevEl: ".main-slider__prev",
   },
+  autoplay: {
+    delay: 5000,
+  },
 });
 
 const newsSwiper = new Swiper(".js-news-swiper", {
@@ -22,6 +25,41 @@ const newsSwiper = new Swiper(".js-news-swiper", {
   navigation: {
     nextEl: ".news__next",
     prevEl: ".news__prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+  },
+});
+
+const playsSwiper = new Swiper(".js-plays-swiper", {
+  slidesPerView: 3,
+  dynamicBullets: true,
+  spaceBetween: 25,
+  pagination: {
+    el: ".plays__pagination",
+  },
+  navigation: {
+    nextEl: ".plays__next",
+    prevEl: ".plays__prev",
   },
   breakpoints: {
     320: {
