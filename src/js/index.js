@@ -1,8 +1,8 @@
 //= libs.js
 
 window.addEventListener("load", function () {
-  //= components/burger.js
   //= components/swiper.js
-  //= components/news_paragraph.js
+  //= components/burger.js
   //= components/ontop.js
+  //= components/news_paragraph.js
 });
