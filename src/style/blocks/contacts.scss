@@ -1,0 +1,42 @@
+.contacts{
+    margin-bottom: 185px;
+    @include tablet{
+        margin-bottom: 80px;        
+    }
+    &__title{
+        margin-bottom: 95px;
+        @include tablet{
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 40px;
+            
+        }
+    }
+    &__container{   
+        display: grid;
+        grid-template-columns: 1.3fr 2fr;
+        padding-left: 40px;   
+        gap: 70px;
+        @include tablet{
+            display: block;
+            padding-left: 10px;
+            padding-right: 10px;
+        }     
+    }
+    &__info{
+        margin-bottom: 80px;
+        @include tablet{
+            margin-bottom: 40px;
+        }
+    }
+    &__map{
+        filter: grayscale(100%);
+        transform: translateX(50px);
+        @include small-desktop{
+            transform: none;
+        }
+        @include tablet{
+            display: none;
+        }
+    }    
+}

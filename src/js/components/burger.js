@@ -12,12 +12,14 @@ const openBurger = function () {
   mainMenu.classList.add("--open");
   container.classList.add("--open");
   logo.style.opacity = 0;
+  document.body.style.overflow = "hidden";
 };
 
 const closeBurger = function () {
   burgerBtn.classList.remove("--open");
   mainMenu.classList.remove("--open");
   logo.style.opacity = 1;
+  document.body.style.overflow = "";
 };
 
 burgerBtn.addEventListener("click", (e) => {
