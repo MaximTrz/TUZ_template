@@ -1,5 +1,5 @@
 mixin people(people_item)
-    .people
+    a(href="#").people
         div(style=`background: url(../images/${people_item.image}) center no-repeat; background-size: cover;`).people__img
         .people__name=people_item.name
         .people__position=people_item.position

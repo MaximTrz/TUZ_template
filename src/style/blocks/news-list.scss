@@ -1,0 +1,10 @@
+.news-list{
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 370px);
+        column-gap: 25px;
+        justify-items: center;
+        justify-content: center;
+        align-items: center; 
+    }
+}

@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/*
+Theme Name: TUZ_Kungur
+Author: Maxim.Trz
+Description: Театр юного зрителя г. Кунгур
+*/
+
 @import "libs";
 @import "constants";
 @import "functions";
@@ -27,5 +34,8 @@
 @import "blocks/contact-info";
 @import "blocks/feedback-form";
 @import "blocks/section-title";
+@import "blocks/news-list";
+@import "blocks/news-view";
+@import "blocks/pagination";
 @import "blocks/footer";
 @import "swiper";

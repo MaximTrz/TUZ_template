@@ -1,0 +1,47 @@
+.news-view{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    &__data{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__article{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 30px;
+        @include phone{
+            display: block;
+        }
+    }
+
+
+    &__image{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    &__article-images{
+        @include phone{
+            display: none;
+        }
+    }
+
+    &__title{
+        margin-bottom: 20px;
+        border-bottom: 0.4px dashed rgba(0, 0, 0, 0.5);
+        padding-bottom: 20px;
+    }
+    &__text{
+        column-count: 2;
+        column-gap: 20px; 
+        @include tablet{
+            column-count: 1;
+            column-gap: 0px; 
+        } 
+    }
+}
