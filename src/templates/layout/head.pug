@@ -6,10 +6,10 @@ mixin head(page_title, scripts)
         meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
         meta(name="apple-mobile-web-app-capable", content="yes")
         meta(name="format-detection", content="telephone=no")
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>   
         link(rel='stylesheet', href='https://unpkg.com/swiper/swiper-bundle.min.css', media='all')
         script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         link(rel='stylesheet', href='../css/style.css', media='all')
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
         -   if (scripts && scripts.length)
             for script in scripts

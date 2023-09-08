@@ -34,14 +34,14 @@
         line-height: 16px;
         height: 125px;
         overflow: hidden;
-        margin-bottom: 5px;
+        margin-bottom: 18px;
         @include tablet{            
             height: 130px;
         }
     }
     &__button{
         margin-left: 13px;
-        width: 95px;
+        width: 120px;        
     }
     &__date{
         text-align: right;        

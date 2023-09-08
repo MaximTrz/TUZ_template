@@ -13,34 +13,30 @@
     background-color: $sliderElementsColor;
 }
 
-.swiper-button-next{
-    &:after{        
-        transform: translateX(65px) translateY(-20px);
-        color: $sliderElementsColor;
-        @include small-desktop{
-            transform: translateX(40px) translateY(-20px);
-        }
-        @include tablet{
-            transform: translateX(45px) translateY(-20px);
-        }
-        @include phone{
-            display: none;
-        }        
+.swiper-button-next{    
+    transform: translateX(65px) translateY(-20px);
+    color: $sliderElementsColor;
+    @include small-desktop{
+        transform: translateX(40px) translateY(-20px);
     }
+    @include tablet{
+        transform: translateX(45px) translateY(-20px);
+    }
+    @include phone{
+        display: none;
+    } 
 }
 
 .swiper-button-prev{
-    &::after{
-        transform: translateX(-65px) translateY(-20px);; 
-        color: $sliderElementsColor;
-        @include small-desktop{
-            transform: translateX(-40px) translateY(-20px); 
-        }
-        @include tablet{
-            transform: translateX(-45px) translateY(-20px); 
-        }
-        @include phone{
-            display: none;
-        } 
-    }  
+    transform: translateX(-65px) translateY(-20px);
+    color: $sliderElementsColor;
+    @include small-desktop{
+        transform: translateX(-40px) translateY(-20px); 
+    }
+    @include tablet{
+        transform: translateX(-45px) translateY(-20px); 
+    }
+    @include phone{
+        display: none;
+    } 
 } 

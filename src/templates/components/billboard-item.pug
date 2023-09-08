@@ -1,17 +1,18 @@
 include ../components/a_button
 
-mixin billboard-item(item)
-    .billboard-item
-        div(style=`background: url(../images/${item.image}) center no-repeat; background-size: cover;`).billboard-item__img
-        .billboard-item__date
-            .billboard-item__day=item.day
-            .billboard-item__date-time
-                .billboard-item__time=item.time
-                .billboard-item__month=item.month
-        .billboard-item__about
-            .billboard-item__about-text=item.about_text
-            .billboard-item__title=item.title
-                span.billboard-item__age=item.age
-            .billboard-item__director=item.director
-        .billboard-item__button
-            +a_button(`Купить билет`)
+mixin billboard-item(item)    
+        .billboard-item
+            a(href="#").billboard-item__link
+                div(style=`background: url(../images/${item.image}) center no-repeat; background-size: cover;`).billboard-item__img
+                .billboard-item__date
+                    .billboard-item__day=item.day
+                    .billboard-item__date-time
+                        .billboard-item__time=item.time
+                        .billboard-item__month=item.month
+                .billboard-item__about
+                    .billboard-item__about-text=item.about_text
+                    .billboard-item__title=item.title
+                        span.billboard-item__age=item.age
+                    .billboard-item__director=item.director
+            .billboard-item__button
+                +a_button(`Купить билет`)

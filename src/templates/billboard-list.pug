@@ -1,0 +1,23 @@
+extends ./layout/layout
+
+block variables
+    - var page_title = 'Афиша';
+    - let count = 0;
+    - let items = [{image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Там на неведомых дорожках и на Кудыкиной горе", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Как Марфушку замуж выдавали", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}] 
+
+include components/billboard-item
+include components/section-title
+
+block content
+    include sections/mainSlider.pug
+    section.billboard-list
+        .container
+            .billboard-list__title
+                +section_title({text: page_title, link_text: "Развернуть"})
+                
+            ul.billboard-list__wrapper
+                while count < 1
+                    li.billboard-list__item
+                        +billboard-item(items[0])
+                        
+                    - count += 1;

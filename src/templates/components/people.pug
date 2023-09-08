@@ -1,5 +1,12 @@
 mixin people(people_item)
-    .people
-        div(style=`background: url(../images/${people_item.image}) center no-repeat; background-size: cover;`).people__img
-        .people__name=people_item.name
-        .people__position=people_item.position
+    a(href="#").people
+        if people_item.small
+            div(style=`background: url(../images/${people_item.image}) center no-repeat; background-size: cover;`).people__img.--small
+        else
+            div(style=`background: url(../images/${people_item.image}) center no-repeat; background-size: cover;`).people__img
+        if people_item.small
+            .people__name.--small=people_item.name
+        else
+            .people__name=people_item.name
+        if people_item.position
+            .people__position=people_item.position

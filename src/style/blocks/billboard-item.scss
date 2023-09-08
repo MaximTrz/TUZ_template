@@ -1,25 +1,31 @@
-.billboard-item{
-    display: grid;
-    grid-template-columns: 1fr 0.9fr 3fr 0.9fr;
+.billboard-item{    
+    display: grid;    
+    grid-template-columns: 7fr 1.2fr;   
     grid-gap: 30px;
-    @include phone{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
     align-items: center;
+    padding: 10px 0px;
+    position: relative;
     &:hover{
-        background-color: rgba(240, 240, 240, 1);        
-    }
-    @include small-desktop{
-        grid-template-columns: 1fr 0.5fr 3.5fr 0.9fr;
+        background-color: #F0F0F0;        
     }
     @include tablet{
-        grid-template-columns: 0.7fr 3fr 1.2fr;
+        grid-template-columns: 7fr 2fr;   
     }
     @include phone{
-        position: relative;
         display: block;
-    }    
+    }
+    &__link{        
+        display: grid;
+        grid-gap: 30px;    
+        grid-template-columns: 1fr 1.5fr 5fr;
+        align-items: center;
+        @include tablet{
+            grid-template-columns: 1fr 4fr;
+        }
+        @include phone{
+            display: block;
+        }
+    }
     &__img{
         margin-top: 10px;
         margin-bottom: 10px;
@@ -29,10 +35,11 @@
             display: none;
         }
     }
-    &__date{
+    &__date{        
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: $main-text;
         @include small-desktop{
             flex-direction: column;
         }
@@ -59,7 +66,8 @@
         line-height: 19px;
     }
     &__about{
-        padding-left: 20px;
+        color: $main-text;
+        padding-left: 20px;        
         @include phone{
             padding: 0;
         }
@@ -99,10 +107,8 @@
             display: none;
         } 
     }
-    &__button{
-        display: flex;
-        justify-content: flex-end;
-        height: 25px;
+    &__button{        
+        height: 45px;
         @include phone{
             height: auto;
             width: 120px;

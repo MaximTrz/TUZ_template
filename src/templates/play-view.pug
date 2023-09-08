@@ -1,0 +1,60 @@
+extends ./layout/layout
+
+include components/pay-ticket
+include components/people
+
+block variables
+    - var page_title = 'Спектакли';
+    - let date = [{day: "09", month: "июня", time: "Cр, 11:00"}]
+    - let actor = [{name: "Кашеварова Анна Александровна", image: "Eyxu7-4jiMM.jpg", small: true }]
+    - let count = 0;
+    - let actors_count = 0;
+
+block content
+    include sections/mainSlider.pug
+    section.play-card
+        .container.--not-mobile
+            .play-card__title Спектакли 
+                span.play-card__delimiter | 
+                span.play-card__play Там на неведомых дорожках и на Кудыкиной городе            
+        
+        .container
+            .play-card__images
+                .play-card__vertical-images                    
+                    
+                       img(src="../images/8c546yjOMTg 1.jpg", alt="Изображение").play-card__image
+                    
+                       img(src="../images/kudyka.jpg", alt="Изображение").play-card__image.--down
+                        
+                .play-card__main-image-box
+                    div(style=`background: url("../images/kudyka.jpg") center no-repeat; background-size: cover;`).play-card__main-image
+                .play-card__vertical-images
+                    
+                        img(src="../images/kudyka.jpg", alt="Изображение").play-card__image
+                    
+                        img(src="../images/kudyka.jpg", alt="Изображение").play-card__image.--down
+                    
+
+            .play-card__info
+                .play-card__date-wrapper
+                    .play-card__sub-title Расписание            
+                    ul.play-card__date-list
+                        while count < 1
+                            li.play-card__info-date
+                                +pay-ticket(date[0])
+                            
+                            - count += 1;
+                .play-card__text-box
+                    .play-card__play-name Там на неведомых дорожках и на Кудыкиной горе
+                    .play-card__text Каждый раз, выпуская новую работу, режиссёр Ольга Проданова совершает маленькое чудо — преображает давно известные истории, создавая яркое зрелище, способное увлечь не только ребенка, но и взрослого в таинственный мир сказки. Художник- постановщик Лариса Каменских, знакомая вам по спектаклю "Золушка", во всю творит в своей мастерской, чтоб на сцене родилось настоящее чудо. А наши артисты Станислав Смирнов, Дарья Попова, Наталья Оборина и Елена Проданова примеряют на себе новые образы. Спектакль станет очень трогательной историей о поиске счастья. В оформлении спектакля зритель увидит элементы Пермского звериного стиля. Каждая деталь — это органичная, динамичная часть действия, которая будет усиливать эффект от эмоционального воздействия спектакля. Над музыкальным оформлением новой постановки работает знакомый многим кунгурякам композитор Олег Феткулов. Олег поможет погрузить зрителя в удивительную атмосферу волшебной сказки, где зрителям встретится и Красавица райская птица, и Лихо одноглазое, и Болотный мор.
+
+                .play-card__actors
+                    .play-card__sub-title Актеры  
+                    ul.play-card__actors-list                  
+                        while actors_count < 1
+                            li.play-card__actor
+                                +people(actor[0])
+                                
+                            - actors_count += 1;
+                
+

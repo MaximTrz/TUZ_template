@@ -1,0 +1,7 @@
+include ../components/a_button
+mixin pay-ticket(date)
+    .pay-ticket
+        .pay-ticket__day=date.day
+        .pay-ticket__month=date.month
+        .pay-ticket__time=date.time
+        +a_button("Купить билет")

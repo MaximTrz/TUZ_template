@@ -1,9 +1,14 @@
 .people{
+    color: $main-text;
+    display: block;
     &__img{
         height: 338px;
         margin-bottom: 10px;
         @include phone{
             height: 288px;
+        }
+        &.--small{
+            height: 160px; 
         }
     }
     &__name{        
@@ -11,6 +16,11 @@
         font-weight: 500;
         line-height: 19px;
         margin-bottom: 8px;
+        &.--small{
+            font-family: $second-font;
+            font-size: 12px;
+            font-weight: 400;
+        }
     }
     &__position{
         font-family: $second-font;

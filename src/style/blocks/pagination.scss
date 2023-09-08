@@ -1,0 +1,14 @@
+.pagination{
+    text-align: center;
+    margin-bottom: 50px;
+    .page-numbers{
+        color: $active-color;
+        padding: 10px;
+    }
+    .current{
+        color: $not-selected-color;
+    }
+    a.page-numbers:hover{
+        text-decoration: underline;
+    }
+}

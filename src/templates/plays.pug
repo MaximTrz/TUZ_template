@@ -1,0 +1,23 @@
+extends ./layout/layout
+
+block variables
+    - var page_title = 'Спектакли';
+    - let count = 0;
+    - let items = [{title: "Карлсон", image: "kurlson.jpg"}] 
+
+include components/play
+include components/section-title
+
+block content
+    include sections/mainSlider.pug
+    section.plays-list
+        .container
+            .plays-list__title
+                +section_title({text: page_title, link_text: "Развернуть"})
+                
+            ul.plays-list__wrapper
+                while count < 12
+                    li.plays-list__item
+                        +play(items[0])
+                        
+                    - count += 1;

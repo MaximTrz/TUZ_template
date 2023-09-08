@@ -1,7 +1,7 @@
 include ../components/billboard-item
 include ../components/all-items-link
 include ../components/section-title
-- const billboard = [{image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Как Марфушку замуж выдавали", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}];
+- const billboard = [{image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Там на неведомых дорожках и на Кудыкиной горе", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Как Марфушку замуж выдавали", director:  "реж. О. Проданова"}, {image: "DSC_7973.jpg", day: "07", age: " (4+)", time: "Ср, 10:30", month: "июня", about_text: "от 3 лет, 55 минут, без антракта", title: "Ох! Переполох! Или как Кузя дружить учился", director:  "реж. О. Проданова"}];
 section.billboard
     .container.--not-mobile
         .billboard__title
@@ -9,10 +9,10 @@ section.billboard
   
         .container
             .billboard__container
-            ul.billboard__items
-                if billboard.length
-                    each item in billboard
-                        li.billboard__item
-                            +billboard-item(item)
+                ul.billboard__items
+                    if billboard.length
+                        each item in billboard
+                            li.billboard__item
+                                +billboard-item(item)
             .billboard__all-billboard
                 +all-items-link('Вся афиша') 

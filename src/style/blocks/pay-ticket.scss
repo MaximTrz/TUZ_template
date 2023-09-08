@@ -1,0 +1,25 @@
+.pay-ticket{
+    background-color: #D9D9D9;
+    text-align: center;
+    &__day{       
+        font-size: 52px;
+        font-weight: 400;
+        @include phone{
+            font-size: 30px;
+        }
+    }
+    &__month, &__time{
+        font-family: $second-font;
+        font-size: 16px;
+        font-weight: 500;
+        @include phone{
+            font-size: 12px;
+        }
+    }
+    &__month{
+        text-transform: uppercase;
+    }
+    &__time{
+        margin-bottom: 10px;
+    }
+}
