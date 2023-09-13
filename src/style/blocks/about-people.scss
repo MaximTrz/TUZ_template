@@ -1,0 +1,67 @@
+.about-people{
+    margin-bottom: 200px;
+    &__title{
+        margin-bottom: 20px;
+        display: none;
+        @include phone{
+            display: block;
+        }
+    }
+    &__bread-crumbs{
+        margin-bottom: 30px;
+        @include phone{
+            display: none;
+        }
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        column-gap:  20px;  
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include phone{
+            display: flex;
+            flex-direction: column-reverse;
+        }      
+    }
+    &__text{
+        padding-left: 100px;
+        font-family: $second-font;
+        @include tablet{
+            padding-left: 0;            
+            font-size: 11px;
+            font-weight: 400;
+        }        
+    }
+    &__name{
+        display: none;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        @include phone{
+            display: block;
+        }
+    }
+    &__image-box{
+        text-align: left;
+        overflow: hidden;
+        @include phone{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+    }
+    &__image{
+        max-height: 590px;
+        width: auto;
+        @include phone{
+            max-height: 330px;
+        }
+        @include tablet{
+            max-height: 330px;
+        }      
+    }
+
+}

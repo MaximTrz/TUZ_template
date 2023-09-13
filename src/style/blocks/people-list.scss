@@ -1,0 +1,29 @@
+.people-list{
+    margin-bottom: 210px;
+    &__title{
+        margin-bottom: 25px;
+    }
+    @include phone{
+        margin-bottom: 100px;
+    }
+    &__wrapper{
+        display: grid;
+        gap: 25px;
+        row-gap: 50px;
+        grid-template-columns: repeat(auto-fill, 270px);
+        justify-content: center;
+        @include tablet{
+            grid-template-columns: repeat(auto-fill, 170px);
+        }
+        @include phone{
+            grid-template-columns: repeat(auto-fill, 270px);
+        }
+    } 
+    &__item{
+        filter: grayscale(100%); 
+        transition: filter 0.3s;
+        &:hover{            
+            filter: grayscale(0%);        
+        }
+    }
+}

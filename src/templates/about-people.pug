@@ -1,0 +1,28 @@
+extends ./layout/layout
+
+block variables
+    - var page_title = 'Круковская Татьяна Игоревна';
+    - let text = "Татьяна Круковская — художник, декоратор и костюмер в одном лице! да-да, талантов Татьяны Игоревны не счесть! Именно от неё зависит, какой вы уведите сцену во время спектакля: декорации, реквизит — это её рук дело, а ещё костюмы актёров. К любому делу она подходит творчески, продумывает до мелочей! Татьяне поддаются даже самые неподдающиеся ткани и материалы. А ещё наша Татьяна незабываема и неподражаема в исполнении ролей холодной и сдержанной Снежной королевы, ужасающей Крысильды и добродушной Печки. Находясь на самоизоляции, Татьяна не сидит без дела, а готовит дома декорации к новой сказке, которую мы обязательно покажем вам, как только снимут ограничения по проведению мероприятий. Приоткроем вам тайну: смотрите, что мастерит художник для будущей премьеры!"
+
+include components/section-title
+
+block content
+    include sections/mainSlider.pug
+    section.about-people
+        .container.--not-mobile
+            .about-people__title
+                +section_title({text: "О театре", link_text: "Развернуть"})
+        .container            
+            .about-people__bread-crumbs
+                ul.bread-crumbs
+                    li.bread-crumbs__item.--first
+                        a(href="#").bread-crumbs__link О театре
+                    li.bread-crumbs__item
+                        a(href="#").bread-crumbs__link Люди театра
+                    li.bread-crumbs__item Круковская Татьяна Игоревна
+            .about-people__content
+                  .about-people__text
+                        h3.about-people__name Круковская Татьяна Игоревна
+                        =text 
+                  .about-people__image-box
+                    img(src="/images/755dMf_6xr0.jpg", alt="Круковская Татьяна Игоревна").about-people__image

@@ -39,7 +39,7 @@ block content
                 .play-card__date-wrapper
                     .play-card__sub-title Расписание            
                     ul.play-card__date-list
-                        while count < 1
+                        while count < 5
                             li.play-card__info-date
                                 +pay-ticket(date[0])
                             
@@ -51,7 +51,7 @@ block content
                 .play-card__actors
                     .play-card__sub-title Актеры  
                     ul.play-card__actors-list                  
-                        while actors_count < 1
+                        while actors_count < 5
                             li.play-card__actor
                                 +people(actor[0])
                                 

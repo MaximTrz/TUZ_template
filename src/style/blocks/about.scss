@@ -1,0 +1,33 @@
+.about{
+    
+    margin-bottom: 50px;
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 15px;        
+        @include tablet{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        @include phone{  
+            padding: 0 10px;          
+            flex-direction: column-reverse;
+        }
+    }
+    &__text{
+        padding-left: 95px;
+        font-family: $second-font;
+        @include tablet{
+            padding-left: 0;
+            column-count: 2;
+            font-size: 11px;            
+        }
+        @include phone{
+            column-count: 1;
+            font-size: 11px;            
+        }
+    }
+}

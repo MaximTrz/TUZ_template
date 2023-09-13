@@ -75,6 +75,9 @@
     display: block;
     color: $main-light;
     padding: 10px 0px;
+    &:hover{
+      text-decoration: underline;
+    }  
     @include phone{
       border-top: 1px solid rgba(80, 80, 80, 1);      
     }         
@@ -98,7 +101,10 @@
     font-weight: 300;
     padding: 5px 0;
     padding-left: 15px;
-    position: relative;    
+    position: relative;
+    &:hover{
+      text-decoration: underline;
+    }      
     &::before{
       content: '';
       display: block;

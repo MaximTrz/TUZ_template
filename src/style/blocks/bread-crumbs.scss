@@ -1,0 +1,36 @@
+.bread-crumbs{
+    display: flex;
+    align-items: center;    
+    &__item{
+        padding: 0 30px;
+        font-size: 24px;
+        font-weight: 700;
+        &.--first{
+            padding-left: 0; 
+            @include tablet{
+                font-size: 22px;
+            }          
+        }
+        @include tablet{
+            font-size: 16px;
+            font-weight: 700;
+            padding: 0 10px;
+        }
+    }
+    &__link{
+        color: $main-text;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "|";
+            transform: translateX(20px);
+            @include tablet{
+                transform: translateX(10px);
+            }
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+  
+    }
+}

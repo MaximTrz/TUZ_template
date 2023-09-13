@@ -1,0 +1,23 @@
+extends ./layout/layout
+
+block variables
+    - var page_title = 'Люди театра';
+    - let count = 0;
+    - let actor = [{name: "Кашеварова Анна Александровна", image: "Eyxu7-4jiMM.jpg", position: "Актриса" }];
+    
+include components/people
+include components/section-title
+
+block content
+    include sections/mainSlider.pug
+    section.people-list
+        .container.--not-mobile
+            .people-list__title
+                +section_title({text: "Люди театра", link_text: "Развернуть"})
+  
+            ul.people-list__wrapper
+                while count < 12
+                    li.people-list__item
+                        +people(actor[0])
+                        
+                    - count += 1;
